@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=q_!k-5owou0tsa(azfb3sa*9p$_3vmia!(!1)l-k*t+)dkv8@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'social_django',
+    'home.apps.HomeConfig',
 
 ]
 
@@ -144,10 +145,16 @@ AUTHENTICATION_BACKENDS = [
     
 ]
 
+SITE_ID=1
+
 #GITHUB LOGIN
 SOCIAL_AUTH_GITHUB_KEY = "9ff0f6ce175c7f373f56"
 SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
+
+
 LOGIN_REDIRECT_URL ='/dashboard'
+
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),

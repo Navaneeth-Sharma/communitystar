@@ -23,7 +23,8 @@
             <section class="col align-items-center flex-col sign-in">
                 <div class="form-wrapper align-items-center">
 
-                    <form class="form sign-in" method=post enctype=multipart/form-data>
+                    <form class="form sign-in" method=post action="/dashboard" enctype=multipart/form-data>
+                        {% csrf_token %}
                         <br>
                         <h3 style="color: #d4dce1;">SignUp with GitHub</h3>
                         <br>
