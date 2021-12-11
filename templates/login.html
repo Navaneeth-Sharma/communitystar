@@ -29,7 +29,7 @@
                         <br>
                         <br>
                         <br>
-                        <a class="signupwithauth" href="#"><i class='bx bxl-github'></i>  Login With Github</a> 
+                        <a class="signupwithauth" href="{% url 'social:begin' 'github' %}"><i class='bx bxl-github'></i>  Login With Github</a> 
                         <br>
                         <br>
                         <br>
@@ -43,10 +43,8 @@
                             <input type="password" placeholder="Password" id="password" name='password' required />
                             <i class="bi bi-eye-slash eyes" id="togglePassword"></i>
                         </div>
-                        
-
-                    
                     </form>
+
                 </div>
             </section>
             <section class="row content-row">

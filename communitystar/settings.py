@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -129,6 +132,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Added manually 
 
+AUTHENTICATION_BACKENDS = [
+
+    'social_core.backends.github.GithubOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+
+]
+    
+
+SOCIAL_AUTH_GITHUB_KEY = "9ff0f6ce175c7f373f56"
+SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
+LOGIN_REDIRECT_URL ='/dashboard'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
