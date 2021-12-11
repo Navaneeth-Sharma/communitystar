@@ -25,26 +25,15 @@
 
                     <form class="form sign-in" method=post enctype=multipart/form-data>
                         <br>
-                        <a  class="signupwithauth" href="{% url 'social:begin' 'google-oauth2' %}"><i class='bx bxl-google' ></i> Login With Google </a>
+                        <h3 style="color: #d4dce1;">SignUp with GitHub</h3>
+                        <br>
+                        <br>
+                        <a class="signupwithauth" href="{% url 'social:begin' 'github' %}"><i class='bx bxl-github'></i>  Github</a> 
                         <br>
                         <br>
                         <br>
-                        <a class="signupwithauth" href="{% url 'social:begin' 'github' %}"><i class='bx bxl-github'></i>  Login With Github</a> 
-                      
-                        <br>
-                        <br>
-                        <br>
-                        <h3 style="color: #d4dce1;">Login</h3>
-                        <div class="input-group">
-                            <i class="bx bx-mail-send"></i>
-                            <input type="email" placeholder="Email Address" name="email" required />
-                        </div>
-                        <div class="input-group">
-                            <i class="bx bxs-lock-alt"></i>
-                            <input type="password" placeholder="Password" id="password" name='password' required />
-                            <i class="bi bi-eye-slash eyes" id="togglePassword"></i>
-                        </div>
-                        <button>Sign In</button>
+                        
+                        
                     </form>
 
                 </div>

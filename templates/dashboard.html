@@ -1,148 +1,160 @@
 <!doctype html>
 <html lang="">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Propeller Admin Dashboard">
-<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller Admin Dashboard">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
 
-<title>Community Star</title>
-<meta name="description" content="Admin is a material design and bootstrap based responsive dashboard template created mainly for admin and backend applications."/>
+	<title>Community Star</title>
+	<meta name="description"
+		content="Admin is a material design and bootstrap based responsive dashboard template created mainly for admin and backend applications." />
 
-<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.png">
 
-<!-- Google icon -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../static/assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller.min.css">
+	<!-- Google icon -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller.min.css">
 
-<link rel="stylesheet" type="text/css" href="../static/assets/components/datetimepicker/css/bootstrap-datetimepicker.css" />
-<link rel="stylesheet" type="text/css" href="../static/assets/components/datetimepicker/css/pmd-datetimepicker.css" />
-<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-theme.css" />
-<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-admin.css">
-<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-    
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css"
+		href="../static/assets/components/datetimepicker/css/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" type="text/css"
+		href="../static/assets/components/datetimepicker/css/pmd-datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-admin.css">
+	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<!-- Header Starts -->
-<!--Start Nav bar -->
-<nav class="navbar navbar-inverse navbar-fixed-top pmd-navbar pmd-z-depth">
+	<!-- Header Starts -->
+	<!--Start Nav bar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top pmd-navbar pmd-z-depth">
 
-	<div class="container-fluid">
-		<div class="pmd-navbar-right-icon pull-right navigation">
+		<div class="container-fluid">
+			<div class="pmd-navbar-right-icon pull-right navigation">
 
-				</div>
-				
-				
-            </div> <!-- End notifications -->
+			</div>
+
+
+		</div> <!-- End notifications -->
 		</div>
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a href="javascript:void(0);" data-target="basicSidebar" data-placement="left" data-position="slidepush" is-open="true" is-open-width="1200" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons md-light">menu</i></a>	
-		  <a href="/dashboard" class="navbar-brand">
-		  Community Star
-		  </a>
-      <a href="#" class="navbar-brand" style="font-size: 20px; margin-left: 20px;">
-        Topics
-        </a>
-        <a href="#" class="navbar-brand" style="font-size: 20px;">
-          Explore
-          </a>
+			<a href="javascript:void(0);" data-target="basicSidebar" data-placement="left" data-position="slidepush"
+				is-open="true" is-open-width="1200"
+				class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i
+					class="material-icons md-light">menu</i></a>
+			<a href="/dashboard" class="navbar-brand">
+				Community Star
+			</a>
+			<a href="#" class="navbar-brand" style="font-size: 20px; margin-left: 20px;">
+				Topics
+			</a>
+			<a href="#" class="navbar-brand" style="font-size: 20px;">
+				Explore
+			</a>
 
 		</div>
+		</div>
+
+	</nav>
+	<!--End Nav bar -->
+	<!-- Header Ends -->
+
+	<!-- Sidebar Starts -->
+	<div class="pmd-sidebar-overlay"></div>
+
+	<!-- Left sidebar -->
+	<aside id="basicSidebar"
+		class="pmd-sidebar  sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-sidebar-open bg-fill-darkblue sidebar-with-icons"
+		role="navigation">
+		<ul class="nav pmd-sidebar-nav">
+
+			<!-- User info -->
+			<li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
+				<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media"
+					data-sidebar="true" aria-expandedhref="javascript:void(0);">
+					<div class="media-left">
+						<img src="../static/assets/img/user-icon.png" alt="New User">
+					</div>
+					<div class="media-body media-middle">Name here</div>
+					<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="/">Logout</a></li>
+				</ul>
+			</li><!-- End user info -->
+			<br>
+			<br>
+			<button class="buttons"><a style="text-decoration:none; color: #ffffff; border-radius: 0px;"
+					href="#"></i>Create+ </a></button> <b style="color: #e6e6e6;"> Add new Repository</b>
+			<form class="form-inline">
+				<input style="margin-left: 20px;" class="form-control mr-sm-1" type="search" placeholder="Search"
+					aria-label="Search">
+				<button class="buttonss" type="submit">Search</button>
+			</form>
+
+			<li>
+				<a class="pmd-ripple-effect" href="/dashboard">
+					<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="19.83px" height="18px"
+							viewBox="287.725 407.535 19.83 18" enable-background="new 287.725 407.535 19.83 18"
+							xml:space="preserve">
+							<g>
+								<path fill="#C9C8C8" d="M307.555,407.535h-9.108v10.264h9.108V407.535z M287.725,407.535v6.232h9.109v-6.232H287.725z
+		 M296.834,415.271h-9.109v10.264h9.109V415.271z M307.555,419.303h-9.108v6.232h9.108V419.303z" />
+							</g>
+						</svg></i>
+					<span class="media-body">Dashboard</span>
+				</a>
+			</li>
+			</li>
+
+		</ul>
+	</aside><!-- End Left sidebar -->
+
+	<div id="content" class="pmd-content content-area dashboard">
+	</div>
 	</div>
 
-</nav><!--End Nav bar -->
-<!-- Header Ends -->
+	</div>
+	<!--end content area-->
 
-<!-- Sidebar Starts -->
-<div class="pmd-sidebar-overlay"></div>
-
-<!-- Left sidebar -->
-<aside id="basicSidebar" class="pmd-sidebar  sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-sidebar-open bg-fill-darkblue sidebar-with-icons" role="navigation">
-	<ul class="nav pmd-sidebar-nav">
-		
-		<!-- User info -->
-		<li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
-			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" aria-expandedhref="javascript:void(0);">
-				<div class="media-left">
-					<img src="../static/assets/img/user-icon.png" alt="New User">
-				</div>
-				<div class="media-body media-middle">Name here</div>
-				<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
-			</a>
-			<ul class="dropdown-menu">
-				<li><a href="/">Logout</a></li>
+	<!-- Footer Starts -->
+	<!--footer start-->
+	<footer class="admin-footer">
+		<div class="container-fluid">
+			<ul class="list-unstyled list-inline">
+				<li>
+					<span class="pmd-card-subtitle-text"><b style="color: #d4dce1;">Community Star</b> &copy; <span
+							class="auto-update-year"></span>. All Rights Reserved.</span>
+				</li>
 			</ul>
-		</li><!-- End user info -->
-  <br>
-  <br>
-  <button class="buttons"><a style="text-decoration:none; color: #d4dce1;"href="#" ></i>Create</a></button>
-		<form class="form-inline">
-            <input style="margin-left: 20px;"class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
-            <button class="buttonss" type="submit">Search</button>
-          </form>
-		<li> 
-			<a class="pmd-ripple-effect" href="/dashboard">	
-				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="19.83px" height="18px" viewBox="287.725 407.535 19.83 18" enable-background="new 287.725 407.535 19.83 18"
-	 xml:space="preserve">
-<g>
-	<path fill="#C9C8C8" d="M307.555,407.535h-9.108v10.264h9.108V407.535z M287.725,407.535v6.232h9.109v-6.232H287.725z
-		 M296.834,415.271h-9.109v10.264h9.109V415.271z M307.555,419.303h-9.108v6.232h9.108V419.303z"/>
-</g>
-</svg></i>
-				<span class="media-body">Dashboard</span>
-			</a> 
-		</li>
-		</li>
+		</div>
+	</footer>
+	<!--footer end-->
+	<!-- Footer Ends -->
 
-	</ul>
-</aside><!-- End Left sidebar -->
-
-<div id="content" class="pmd-content content-area dashboard">
-	</div>
-</div>
-
-</div><!--end content area-->
-
-<!-- Footer Starts -->
-<!--footer start-->
-<footer class="admin-footer">
- <div class="container-fluid">
- 	<ul class="list-unstyled list-inline">
-	 	<li>
-			<span class="pmd-card-subtitle-text"><b style="color: #d4dce1;">Community Star</b> &copy; <span class="auto-update-year"></span>. All Rights Reserved.</span>
-        </li>
-    </ul>
- </div>
-</footer>
-<!--footer end-->
-<!-- Footer Ends -->
-
-<!-- Scripts Starts -->
-<script src="../static/assets/js/jquery-1.12.2.min.js"></script>
-<script src="../static/assets/js/bootstrap.min.js"></script>
+	<!-- Scripts Starts -->
+	<script src="../static/assets/js/jquery-1.12.2.min.js"></script>
+	<script src="../static/assets/js/bootstrap.min.js"></script>
 
 
 
-<script src="../static/assets/js/propeller.min.js"></script> 
-<script
-src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-crossorigin="anonymous"
-></script>
-<script
-src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-crossorigin="anonymous"
-></script>
+	<script src="../static/assets/js/propeller.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
 
 </body>
+
 </html>

@@ -549,11 +549,11 @@ h1.pmd-display4 { font-size: 4rem;}
 .buttons{
   cursor: pointer;
   width: 30%;
-  margin-left: 60%;
+  margin-left: 5%;
   margin-bottom: 20px;
   height: 40px;
   /* padding: 0.6rem 0; */
-  border-radius: 50px;
+  border-radius: 5px;
   border: none;
   background-color: #3cad44;
   color: white;
