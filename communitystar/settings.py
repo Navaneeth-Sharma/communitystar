@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'social_django',
+
 ]
 
 MIDDLEWARE = [
@@ -133,14 +135,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Added manually 
 
 AUTHENTICATION_BACKENDS = [
-
+    'social_core.backends.google.GoogleOAuth2',
+    
     'social_core.backends.github.GithubOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
-
-]
     
+    
+]
+#google login
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "http://163372476177-f8tqkrt77d3v1t0f8r5u2qj1qfm5p295.apps.googleusercontent.com/"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
 
+#GITHUB LOGIN
 SOCIAL_AUTH_GITHUB_KEY = "9ff0f6ce175c7f373f56"
 SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
 LOGIN_REDIRECT_URL ='/dashboard'

@@ -25,11 +25,12 @@
 
                     <form class="form sign-in" method=post enctype=multipart/form-data>
                         <br>
-                        <a  class="signupwithauth" href="#"><i class='bx bxl-google' ></i> Login With Google </a>
+                        <a  class="signupwithauth" href="{% url 'social:begin' 'google-oauth2' %}"><i class='bx bxl-google' ></i> Login With Google </a>
                         <br>
                         <br>
                         <br>
                         <a class="signupwithauth" href="{% url 'social:begin' 'github' %}"><i class='bx bxl-github'></i>  Login With Github</a> 
+                      
                         <br>
                         <br>
                         <br>
