@@ -18,6 +18,10 @@ def forgotpassword(request):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
+    
+def create(request):
+    return render(request, 'createpage.html')
+
 
 
 
