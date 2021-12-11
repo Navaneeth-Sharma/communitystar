@@ -9,7 +9,7 @@
     
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="../static/assets/css/styles.css" />
+    <link rel="stylesheet" href="../static/assets/css/questionstyle.css" />
     <link href="../static/assets/img/favicon.png" rel="icon">
     <link href="../static/assets/img/favicon.png" rel=" apple-touch-icon">
   
@@ -19,40 +19,91 @@
     <div id="container" class="container">
         <!-- form section -->
         <div class="row">
-            <!-- sign in -->
-            <section class="col align-items-center flex-col sign-in">
-                <div class="form-wrapper align-items-center">
+            <h1 style="color:#d4dce1; font-family:Mulish;margin-left: 30%;">Please answer to the questions below!</h1>
+                <form name="test">
+                  <div class="question">
+                    <p>Which programming language are you using?</p>
+                    <select name="html">
+                      <option value="css">CSS</option>
+                      <option value="html">HTML</option>
+                      <option value="js">Javascript</option>
+                      <option value="helloworld">HelloWorld</option>
+                    </select>
+                  </div>
+                  <div class="question">
+                    <p>Which programming language are you using?</p>
+                    <label>
+                      <input type="checkbox" name="variable" value="let" />
+                      let
+                    </label>
+                    <label>
+                      <input type="checkbox" name="variable" value="const" />
+                      const
+                    </label>
+                    <label>
+                      <input type="checkbox" name="variable" value="for" />
+                      for
+                    </label>
+                    <label>
+                      <input type="checkbox" name="variable" value="return" />
+                      return
+                    </label>
+                  </div>
+                  <div class="question">
+                    <p>Select the domain of the project</p>
+                    <label>
+                      <input type="radio" name="bool" value="0" />
+                     AI
+                    </label>
+                    <label>
+                      <input type="radio" name="bool" value="1" />
+                     Web Development
+                    </label>
+                    <label>
+                        <input type="radio" name="bool" value="2" />
+                      App Development
+                      </label>
+                      <label>
+                        <input type="radio" name="bool" value="3" />
+                      Machine Learning
+                      </label>
+                      <label>
+                        <input type="radio" name="bool" value="4" />
+                      IOT
+                      </label>
+                  </div>
+                  <div class="question">
+                    <p>Which programming language are you using?</p>
+                    <textarea style="width: 30%;"></textarea>
+                  </div>
+                  <div class="question">
+                    <p>Which framework are you using?</p>
+                    <textarea style="width: 30%;"></textarea>
+                  </div>
+                  <div class="question">
+                    <p>Rate the level of the project</p>
+                    <label>
+                        <input type="radio" name="bool" value="0" />
+                      Begineer
+                      </label>
+                      <label>
+                        <input type="radio" name="bool" value="1" />
+                      Expert
+                      </label>
+                      <label>
+                        <input type="radio" name="bool" value="2" />
+                      Pro
+                      </label>
+                  </div>
+                  <button type="button"class="buttons">Submit</button>
+                </form>
+            
+                
+     </div>
 
-                    <form class="form sign-in" method=post enctype=multipart/form-data>
-                        <br>
-                        <h3 style="color: #d4dce1;">SignUp with GitHub</h3>
-                        <br>
-                        <br>
-                        <a class="signupwithauth" href="{% url 'social:begin' 'github' %}"><i class='bx bxl-github'></i>  Github</a> 
-                        <br>
-                        <br>
-                        <br>
-                        
-                        
-                    </form>
-
-                </div>
-            </section>
-            <section class="row content-row">
-                <!-- sign in  -->
-                <div class="col align-items-center flex-col">
-
-                    <div class="img sign-in" id="login">
-                        <img src="../static/assets/img/login.jpg" alt="welcome" />
-                    </div>
-                </div>
-            </section>
-        </div>
     </div>
 
-    </div>
-
-    <script src="../static/assets/js/scripts.js"></script>
 </body>
-
+<script src="./index.js"></script>
+    
 </html>

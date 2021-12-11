@@ -1,0 +1,30 @@
+* {
+    font-family: 'Mulish', sans-serif;
+  
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f1012;
+}
+.question {
+    padding: 20px;
+    border-radius: 10px;
+    background: #202328;
+    margin-bottom: 10px;
+    color: #d4dce1;
+    box-shadow: 1px 2px 3px #121311;
+  }
+.buttons{
+    cursor: pointer;
+    width: 10%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    height: 40px;
+    /* padding: 0.6rem 0; */
+    border-radius: 5px;
+    border: none;
+    background-color: #3cad44;
+    color: white;
+    font-size: 1.2rem;
+    outline: none;
+  }
