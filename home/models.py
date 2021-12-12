@@ -1,7 +1,6 @@
 from django.db import models
 from social_django.models import UserSocialAuth
 from django.contrib.auth.models import User
-from django.contrib.postgres.fields import JSONField
 
 # Create your models here.
 
@@ -18,7 +17,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     image = models.URLField(max_length=200)
-    project_urls = JSONField(default=dict)
+    project_urls = models.JSONField(default=dict)
 
     class Meta:
         verbose_name = 'User Profile'
