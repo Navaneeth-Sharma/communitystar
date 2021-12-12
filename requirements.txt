@@ -6,3 +6,4 @@ social-auth-app-django == 5.0.0
 whitenoise == 4.0
 psycopg2
 jsonfield
+gunicorn
