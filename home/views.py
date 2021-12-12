@@ -22,16 +22,12 @@ def index(request):
 def login(request):
     return render(request, 'login.html')
 
-def signup(request):
-    return render(request, 'signup.html')
-
 def logout(request):
     auth_logout(request)
     return redirect('/')
 
 @csrf_exempt
 def dashboard(request):
-    
     if not request.user.is_authenticated:
         return redirect('/')
     # print(request.user)

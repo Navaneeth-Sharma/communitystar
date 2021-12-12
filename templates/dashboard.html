@@ -60,7 +60,13 @@
 			<a href="#" class="navbar-brand" style="font-size: 20px;">
 				Explore
 			</a>
-
+			<div class="navbar-brand">
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+						style="background-color: #3cad44;color: #d4dce1;">Search</button>
+				</form>
+			</div>
 		</div>
 		</div>
 
@@ -95,23 +101,21 @@
 			<br>
 			<button class="buttons"><a style="text-decoration:none; color: #ffffff; border-radius: 0px;"
 					href="/create"></i>Create+ </a></button> <b style="color: #e6e6e6;"> Add new Repository</b>
-			<form class="form-inline">
-				<input style="margin-left: 20px;" class="form-control mr-sm-1" type="search" placeholder="Search"
-					aria-label="Search">
-				<button class="buttonss" type="submit">Search</button>
-			</form>
+
 
 			<li>
 				{{listofprojects}}
 
 			</li>
 			</li>
-
+			<p id="demo"></p>
+			<script>
+				const txt = JSON.stringify({ listofprojects });
+				const obj = JSON.parse(txt);
+				document.getElementById("demo").innerHTML = obj.title + ", " + obj.age;
+			</script>
 		</ul>
 	</aside><!-- End Left sidebar -->
-
-
-
 
 	<div id="content" class="pmd-content content-area dashboard">
 		<div class="container page-container">
@@ -139,13 +143,6 @@
 				{% endfor %}
 			</div>
 		</div>
-	</div>
-
-
-
-
-
-	</div>
 	</div>
 	</div>
 	</div>
