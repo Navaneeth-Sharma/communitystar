@@ -94,7 +94,7 @@ table.dataTable.hover.table-inverse tbody > tr.selected:hover, table.dataTable.h
 table.dataTable.display.table-inverse tbody > tr.even.selected > .sorting_1, table.dataTable.order-column.stripe.table-inverse tbody > tr.even.selected > .sorting_1,
 table.dataTable.display.table-inverse tbody > tr.odd.selected > .sorting_1, table.dataTable.order-column.stripe.table-inverse tbody > tr.odd.selected > .sorting_1{ background-color:#313131;}
 table.dataTable.table-inverse td.select-checkbox::before{ border-color: rgba(255, 255, 255, 0.54);}
-/* .pmd-card-inverse .custom-select{ background: #373a3c url("media/images/arrow_drop_down-white.svg") no-repeat scroll 90% 50%;} */
+.pmd-card-inverse .custom-select{ background: #373a3c url("media/images/arrow_drop_down-white.svg") no-repeat scroll 90% 50%;}
 .pmd-card-inverse div.dataTables_length select{color: #fff;}
 .pmd-card-inverse .custom-select-info{ background-color: #313131;  height: 64px; position: absolute; top: 0; width: 100%; line-height:64px; padding:0 16px; font-size:16px;}
 .pmd-card-inverse table.dataTable > tbody > tr.child{ background-color:#313131;}

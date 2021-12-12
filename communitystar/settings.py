@@ -21,7 +21,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/assets'),
 )
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +30,7 @@ from django.core.management.utils import get_random_secret_key
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default=get_random_secret_key())
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-=q_!k-5owou0tsa(azfb3sa*9p$_3vmia!(!1)l-k*t+)dkv8@'
+SECRET_KEY = 'django-insecure-=q_!k-5owou0tsa(azfb3sa*9p$_3vmia!(!1)l-k*t+)dkv8@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
