@@ -54,12 +54,7 @@
 			<a href="/dashboard" class="navbar-brand">
 				Community Star
 			</a>
-			<a href="#" class="navbar-brand" style="font-size: 20px; margin-left: 20px;">
-				Topics
-			</a>
-			<a href="#" class="navbar-brand" style="font-size: 20px;">
-				Explore
-			</a>
+		
 			<div class="navbar-brand">
 				<form class="form-inline my-2 my-lg-0" action="/dashboard" method="post">
 					<input class="form-control mr-sm-2" style="width:400px;" id="searchbar" name="search" type="search" onkeyup="card_search()" placeholder="Search" aria-label="Search">
@@ -97,7 +92,7 @@
 				<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media"
 					data-sidebar="true" aria-expandedhref="javascript:void(0);">
 					<div class="media-left">
-						<img src={{avatar_url}} alt="New User">
+						<img  width="45px" style="border-radius: 20px;" src={{avatar_url}} alt="New User">
 					</div>
 					<div class="media-body media-middle">{{user}}</div>
 					<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
@@ -111,14 +106,22 @@
 			<button class="buttons"><a style="text-decoration:none; color: #ffffff; border-radius: 0px;"
 					href="/create"></i>Create+ </a></button> <b style="color: #e6e6e6;"> Add new Repository</b>
 
-
-			
-
+<br>
+<br>
 				{% for i in listofprojects %}
-					<li>{{i}}</li>
+					<li style="margin-left:30px;
+					font-size: 20px;
+					color: #d4dce1;
+					margin-bottom: 5px;
+					
+					
+					
+					
+					
+					
+					
+					">{{i}}</li>
 				{% endfor %}
-
-			
 			</li>
 			<p id="demo"></p>
 			<script>
@@ -139,9 +142,9 @@
 							<figcaption>
 								<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
 								<input type="hidden"  name="title"  value={{project.title}}>
-								<h5><a href={{project.link}}  style="color: #ffffff;">{{project.title}}</a></h5>
-								<h6 name="user">@{{project.creator}}</h6>
-								<p>{{project.description}}</p>
+								<h5><a href={{project.link}}  style="color: #ffffff;" target="_blank">{{project.title}}</a></h5>
+								<h6 name="user"style="color: #ffffff;">@{{project.creator}}</h6>
+								<p style="color: #ffffff;">{{project.description}}</p>
 
 								<div class="clearfix">
 									<span class="badge badge-pill badge-info">{{project.prog}}</span>
@@ -149,6 +152,7 @@
 									<span class="badge badge-pill badge-success">{{project.org}}</span>
 								</div>
 							</figcaption>
+							<br>
 							<button class="buttons" type="submit"> I'm in </button>
 						</figure>
 						
