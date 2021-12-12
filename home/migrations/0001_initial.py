@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('social_django', '0012_delete_userprofile'),
+        # ('social_django', '0012_delete_userprofile'),
     ]
 
     operations = [

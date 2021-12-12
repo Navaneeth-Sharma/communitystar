@@ -24,6 +24,8 @@
 		href="../static/assets/components/datetimepicker/css/pmd-datetimepicker.css" />
 	<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-theme.css" />
 	<link rel="stylesheet" type="text/css" href="../static/assets/css/propeller-admin.css">
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/dashstyle.css">
+	<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
 	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 
 	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
@@ -82,11 +84,11 @@
 					<div class="media-left">
 						<img src="../static/assets/img/user-icon.png" alt="New User">
 					</div>
-					<div class="media-body media-middle">Name here</div>
+					<div class="media-body media-middle">{{user}}</div>
 					<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a href="/">Logout</a></li>
+					<li><a href="/logout">Logout</a></li>
 				</ul>
 			</li><!-- End user info -->
 			<br>
@@ -101,17 +103,7 @@
 
 			<li>
 				{{listofprojects}}
-				<a class="pmd-ripple-effect" href="/dashboard">
-					<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="19.83px" height="18px"
-							viewBox="287.725 407.535 19.83 18" enable-background="new 287.725 407.535 19.83 18"
-							xml:space="preserve">
-							<g>
-								<path fill="#C9C8C8" d="M307.555,407.535h-9.108v10.264h9.108V407.535z M287.725,407.535v6.232h9.109v-6.232H287.725z
-		 M296.834,415.271h-9.109v10.264h9.109V415.271z M307.555,419.303h-9.108v6.232h9.108V419.303z" />
-							</g>
-						</svg></i>
-					<span class="media-body">Dashboard</span>
-				</a>
+			
 			</li>
 			</li>
 
@@ -119,6 +111,102 @@
 	</aside><!-- End Left sidebar -->
 
 	<div id="content" class="pmd-content content-area dashboard">
+		<div class="container page-container">
+			<div class="row gutters">
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+					<figure class="user-card green">
+						<figcaption>
+							<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
+							<h5>Soeng Souy</h5>
+							<h6>@movies</h6>
+							<p>On the 28th of October 2020 we completed a 3-part transaction with the contractor.</p>
+						
+							<div class="clearfix">
+								<span class="badge badge-pill badge-info">#HTML5</span>
+								<span class="badge badge-pill badge-error">#Python</span>
+								<span class="badge badge-pill badge-success">#CSS3</span>
+								<span class="badge badge-pill badge-warning">#Angular JS</span>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+					<figure class="user-card blue">
+						<figcaption>
+							<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
+							<h5>Cong Ly</h5>
+							<h6>@hollywood</h6>
+							<p>On the 28th of October 2019 we completed a 3-part transaction with the contractor.</p>
+					
+							<div class="clearfix">
+								<span class="badge badge-pill badge-info">#HTML5</span>
+								<span class="badge badge-pill badge-error">#Python</span>
+								<span class="badge badge-pill badge-success">#CSS3</span>
+								<span class="badge badge-pill badge-warning">#Angular JS</span>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+					<figure class="user-card pink">
+						<figcaption>
+							<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
+							<h5>Star Game</h5>
+							<h6>@gamestar</h6>
+							<p>On the 28th of October 2018 we completed a 3-part transaction with the contractor.</p>
+					
+							<div class="clearfix">
+								<span class="badge badge-pill badge-info">#HTML5</span>
+								<span class="badge badge-pill badge-error">#Python</span>
+								<span class="badge badge-pill badge-success">#CSS3</span>
+								<span class="badge badge-pill badge-warning">#Angular JS</span>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+					<figure class="user-card brown">
+						<figcaption>
+							<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
+							<h5>To Ly</h5>
+							<h6>@business</h6>
+							<p>On the 28th of October 2017 we completed a 3-part transaction with the contractor.</p>
+						
+							<div class="clearfix">
+								<span class="badge badge-pill badge-info">#HTML5</span>
+								<span class="badge badge-pill badge-error">#Python</span>
+								<span class="badge badge-pill badge-success">#CSS3</span>
+								<span class="badge badge-pill badge-warning">#Angular JS</span>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+					<figure class="user-card fb">
+						<figcaption>
+							<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
+							<h5>Harry</h5>
+							<h6>@writer</h6>
+							<p>On the 28th of October 2016 we completed a 3-part transaction with the contractor.</p>
+					
+							<div class="clearfix">
+								<span class="badge badge-pill badge-info">#HTML5</span>
+								<span class="badge badge-pill badge-error">#Python</span>
+								<span class="badge badge-pill badge-success">#CSS3</span>
+								<span class="badge badge-pill badge-warning">#Angular JS</span>
+							</div>
+						</figcaption>
+					</figure>
+			
+			</div>
+		
+	
+		
+			
+				
+			</div>
+			</div>
 	</div>
 	</div>
 
@@ -145,7 +233,8 @@
 	<script src="../static/assets/js/bootstrap.min.js"></script>
 
 
-
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="../static/assets/js/propeller.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

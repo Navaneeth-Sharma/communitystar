@@ -22,37 +22,20 @@
             <h1 style="color:#d4dce1; font-family:Mulish;margin-left: 30%;">Please answer to the questions below!</h1>
                 <form name="test">
                   <div class="question">
-                    <p>Which programming language are you using?</p>
-                    <select name="html">
-                      <option value="css">CSS</option>
-                      <option value="html">HTML</option>
-                      <option value="js">Javascript</option>
-                      <option value="helloworld">HelloWorld</option>
+                    <p>Select the relevant operating systems</p>
+                    <select name="" required>
+                      <option value="Windows">Windows </option>
+                      <option value="MacOs">MacOS</option>
+                      <option value="iOS">iOS</option>
+                      <option value="Android">Android</option>
+                      <option value="Linux">Linux</option>
                     </select>
                   </div>
-                  <div class="question">
-                    <p>Which programming language are you using?</p>
-                    <label>
-                      <input type="checkbox" name="variable" value="let" />
-                      let
-                    </label>
-                    <label>
-                      <input type="checkbox" name="variable" value="const" />
-                      const
-                    </label>
-                    <label>
-                      <input type="checkbox" name="variable" value="for" />
-                      for
-                    </label>
-                    <label>
-                      <input type="checkbox" name="variable" value="return" />
-                      return
-                    </label>
-                  </div>
+              
                   <div class="question">
                     <p>Select the domain of the project</p>
                     <label>
-                      <input type="radio" name="bool" value="0" />
+                      <input type="radio" name="bool" value="0"  required/>
                      AI
                     </label>
                     <label>
@@ -73,29 +56,53 @@
                       </label>
                   </div>
                   <div class="question">
+                    <p>Please provide the Link of the repository</p>
+                    <input style="width: 30%;"type="url" name="Link" id="Link"required>
+                  </div>
+                  <div class="question">
+                    <p>Select the stage of development the project is in.?</p>
+                    <textarea style="width: 30%;"required></textarea>
+                  </div>
+                  <div class="question">
                     <p>Which programming language are you using?</p>
-                    <textarea style="width: 30%;"></textarea>
+                    <textarea style="width: 30%;"required></textarea>
+                  </div>
+                  <div class="question">
+                    <p>Are you from an organization</p>
+                    <label>
+                      <input type="radio" name="bool" value="0" required/>
+                    Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="bool" value="1" />
+                    No
+                    </label>
+              
+                  </div>
+                  <div class="question">
+                    <p>If yes how many people are working on the project?</p>
+                    <textarea style="width: 30%;" required></textarea>
                   </div>
                   <div class="question">
                     <p>Which framework are you using?</p>
-                    <textarea style="width: 30%;"></textarea>
+                    <textarea style="width: 30%;"required></textarea>
                   </div>
                   <div class="question">
                     <p>Rate the level of the project</p>
                     <label>
-                        <input type="radio" name="bool" value="0" />
+                        <input type="radio" name="bool" value="0" required/>
                       Begineer
                       </label>
                       <label>
-                        <input type="radio" name="bool" value="1" />
+                        <input type="radio" name="bool" value="1"  required/>
                       Expert
                       </label>
                       <label>
-                        <input type="radio" name="bool" value="2" />
+                        <input type="radio" name="bool" value="2"  required/>
                       Pro
                       </label>
                   </div>
-                  <button type="button"class="buttons">Submit</button>
+                  <button type="submit"class="buttons"value="Submit">Submit</button>
                 </form>
             
                 
@@ -104,6 +111,6 @@
     </div>
 
 </body>
-<script src="./index.js"></script>
+<!-- <script src="./index.js"></script> -->
     
 </html>

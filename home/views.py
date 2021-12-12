@@ -4,6 +4,7 @@ from django.http import request
 from django.contrib.auth import authenticate
 from django.contrib import auth
 import requests 
+from django.contrib.auth import logout as auth_logout
 
 def get_data(username):
     res = requests.get('https://api.github.com/users/'+str(username)).json()
@@ -23,19 +24,18 @@ def login(request):
 def signup(request):
     return render(request, 'signup.html')
 
-def resetpassword(request):
-    return render(request, 'resetpassword.html')
-
-def forgotpassword(request):
-    return render(request, 'forgotpassword.html')
+def logout(request):
+    auth_logout(request)
+    return redirect('/')
 
 def dashboard(request):
+    
     if not request.user.is_authenticated:
         return redirect('/')
     # print(request.user)
     for i in range(len(UserProfile.objects.all())):
         if UserProfile.objects.all()[i].user == request.user:
-            return render(request, 'dashboard.html', {'listofprojects': UserProfile.objects.all()[0].project_urls})
+            return render(request, 'dashboard.html', {'listofprojects': UserProfile.objects.all()[0].project_urls['0']})
     
     img, name =  get_data(request.user)
     UserProfile.objects.create(user=request.user, name=name, image=img)
@@ -44,6 +44,7 @@ def dashboard(request):
 
 def create(request):
     return render(request, 'createpage.html')
+
 
 
 # <!-- <button>Sign in</button>
