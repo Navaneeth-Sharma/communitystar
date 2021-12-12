@@ -28,3 +28,35 @@ body{
     font-size: 1.2rem;
     outline: none;
   }
+  .in{
+    background-color: #d4dce1;
+    color: #0f1012;
+  }
+  multi-input {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+  }
+  
+  button {
+    background-color: #eee;
+    border: 1px solid #ddd;  
+    font-size: 16px;
+    height: 30px;
+    margin: 0 10px 20px 0;
+  }
+  
+  body > div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  label {
+    display: block;
+    margin: 0 20px 20px 0;
+  }
+  
+  p {
+    text-align: center;
+  }
+  

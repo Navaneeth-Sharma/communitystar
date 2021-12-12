@@ -43,6 +43,9 @@ class projectsdetails(models.Model):
     def __str__(self):
         return self.title
 
+from django.contrib.postgres.fields import ArrayField
+
+    # pieces = 
 class projectsTaken(models.Model):
     
     user = models.CharField(max_length=200)

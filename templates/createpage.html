@@ -59,7 +59,24 @@
         </div>
         <div class="question">
           <p>Which programming language are you using?</p>
-          <textarea style="width: 30%;" name="prog" required></textarea>
+          <div style="width: 30%;">
+            <multi-input name="prog">
+              <input list="pglanguages" class="in" >
+              <datalist id="pglanguages">
+                <option value="Python"></option>
+                <option value="HTML/CSS"></option>
+                <option value="Javascript"></option>
+                <option value="C"></option>
+                <option value="C++"></option>
+                <option value="Java"></option>
+                <option value="PHP"></option>
+                <option value="Golang"></option>
+              </datalist>
+            </multi-input>
+          </div>
+        
+          <p id="values"></p>
+        
         </div>
         <div class="question">
           <p>Are you from an organization</p>
@@ -79,7 +96,7 @@
         </div>
         <div class="question">
           <p>Description</p>
-          <textarea style="width: 30%; heigth=150%" name="description" required></textarea>
+          <textarea style="width: 30%; height:150%" name="description" required></textarea>
         </div>
         <div class="question">
           <p>Rate the level of the project</p>
@@ -100,6 +117,6 @@
   </div>
 
 </body>
-<!-- <script src="./index.js"></script> -->
-
+<script src="../static/assets/js/script.js"></script>
+<script src="../static/assets/js/multi-input.js"></script>
 </html>

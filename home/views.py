@@ -30,32 +30,22 @@ def logout(request):
 def dashboard(request):
     if not request.user.is_authenticated:
         return redirect('/')
-    # print(request.user)
-    # for i in projectsdetails.objects.all():
-    #     print(i)
+
     if request.method == 'POST':
-        if len(projectsTaken.objects.all()) != 0:
-            print("hajjakanjwn")
-            for i in projectsTaken.objects.all():
-                if i.user == request.user:
-                    i.project = request.POST.get("title")
-                    i.save()
-        else:
-            print("hajjakanjwn")
+        try:
             projectsTaken.objects.create(user=request.user, project = request.POST["title"])
-    
+        except:
+            pass
+
     for i in range(len(UserProfile.objects.all())):
         if UserProfile.objects.all()[i].user == request.user:
-            return render(request, 'dashboard.html', {'listofprojects': UserProfile.objects.all()[0].project_urls['0'],
-            'allproject': projectsdetails.objects.all()})
+            print(projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct())
+            return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct(),
+            'allproject': projectsdetails.objects.all(), 'avatar_url': get_data(request.user)[0]})
             
     
     img, name =  get_data(request.user)
     UserProfile.objects.create(user=request.user, name=name, image=img)
-
-    return render(request, 'dashboard.html')
-
-
 
 
 @csrf_exempt
@@ -68,7 +58,7 @@ def create(request):
                                         creator=request.user,
                                         description=request.POST['description'],
                                         title=request.POST['title'],
-                                        stage=request.POST['stage'],prog=request.POST['prog'],
+                                        stage=request.POST['stage'],prog=request.POST.getlist('prog'),
                                         org=request.POST['org'],count=request.POST['count'],
                                         framework=request.POST['framework'],level=request.POST['level'])
         print("NSJJK")
@@ -76,55 +66,3 @@ def create(request):
        
     return render(request, 'createpage.html')
 
-
-
-
-# <div id="content" class="pmd-content content-area dashboard">
-# 		<div class="container page-container">
-# 			<div class="row gutters">
-# 				{% for project in allproject %}
-# 				<form method="POST" action="">
-# 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
-# 						<figure class="user-card green">
-# 							<figcaption>
-# 								<img src="../static/assets/img/favicon.png" alt="Soeng Souy" class="profile">
-# 								<h5><a name="title" href={{project.link}}>{{project.title}}</a></h5>
-# 								<h6 name="user">@{{project.creator}}</h6>
-# 								<p>{{project.description}}</p>
-
-# 								<div class="clearfix">
-# 									<span class="badge badge-pill badge-info">{{project.prog}}</span>
-# 									<span class="badge badge-pill badge-error">{{project.framework}}</span>
-# 									<span class="badge badge-pill badge-success">{{project.org}}</span>
-# 								</div>
-# 							</figcaption>
-# 						</figure>
-# 						<button class="buttons" type="submit"> I'm in </button>
-# 					</div>
-# 				</form>
-# 				{% endfor %}
-# 			</div>
-# 		</div>
-# 	</div>
-
-# <!-- <button>Sign in</button>
-#                         <p style="margin-right: -300px;"><a href="{{url_for('forgotpassword')}}" style=" color: #d4dce1;;">Forgot
-#                                 password?</a></p>
-                                
-#                             <h5>
-#                         <h5>
-#                             <span style="color: #d4dce1;">Don't have an account?</span>
-#                             <b> <a href="{{url_for('signup')}}" style="color: #ec4141" class="pointer">Sign up</a></b>
-
-#                         </h5> -->
-
-#                         <!-- {% with messages = get_flashed_messages() %}
-#                         {% if messages %}
-#                                 {% for message in messages %}
-#                                 <div class="alert alert-warning alert-dismissible" style="color: green;">
-                                
-#                                           {{ message }}
-#                                         </div>
-#                                 {% endfor %}
-#                         {% endif %}
-#                     {% endwith %} -->
