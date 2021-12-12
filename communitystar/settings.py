@@ -161,10 +161,19 @@ SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
 
 LOGIN_REDIRECT_URL ='/dashboard'
 
-STATIC_URL = '/static/'
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, "static"),
-]
+STATIC_URL = '/static/'
+if DEBUG:
+   STATICFILES_DIRS = [
+   os.path.join(BASE_DIR, 'static'),
+   ]
+else:
+   STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+# PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+# STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [
+#     # os.path.join(BASE_DIR, "static"),
+# ]
