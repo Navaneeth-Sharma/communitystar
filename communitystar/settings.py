@@ -163,7 +163,7 @@ SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
 LOGIN_REDIRECT_URL ='/dashboard'
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
