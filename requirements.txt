@@ -3,7 +3,7 @@ Jinja2==2.10.1
 djangorestframework == 3.11.0
 social-auth-app-django
 whitenoise
-psycopg2
+psycopg2==2.8.6
 django-jsonfield
 gunicorn
 dj-database-url
