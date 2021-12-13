@@ -33,7 +33,7 @@ def dashboard(request):
 
     if request.method == 'POST':
         try:
-            projectsTaken.objects.create(user=request.user, project = request.POST["title"])
+            projectsTaken.objects.create(user=request.user, project = request.POST["title"], url=request.POST["url"])
         except:
             pass
 
@@ -44,8 +44,8 @@ def dashboard(request):
             # qs = projectsTaken.objects.values_list('FieldA','FieldB')
             # qs = list(itertools.chain(*qs))
             
-            print(projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct())
-            return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct(),
+            print(projectsTaken.objects.filter(user=request.user).only('project', 'url').values_list('project', flat=True).distinct())
+            return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project').values_list('project',  flat=True).distinct(),
             'allproject': projectsdetails.objects.all(), 'avatar_url': get_data(request.user)[0]})
             
     
@@ -67,7 +67,6 @@ def create(request):
                                         stage=request.POST['stage'],prog=request.POST.getlist('prog'),
                                         org=request.POST['org'],count=request.POST['count'],
                                         framework=request.POST['framework'],level=request.POST['level'])
-        print("NSJJK")
         return redirect('/dashboard')
        
     return render(request, 'createpage.html')

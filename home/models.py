@@ -51,6 +51,8 @@ class projectsTaken(models.Model):
     
     user = models.CharField(max_length=200)
     project = models.CharField(max_length=200)
+    url = models.URLField(max_length=200)
+    
     class Meta:
         verbose_name = 'Project Taken'
         verbose_name_plural = 'Projects Taken'
