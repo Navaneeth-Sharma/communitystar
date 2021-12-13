@@ -107,12 +107,14 @@
 
 			<br>
 			<br>
+			<h3 style="color: #ffffff;">Your Workplace</h3>
+			<br>
 			{% for i in listofprojects %}
 			<li style="margin-left:30px;
 					font-size: 20px;
 					color: #d4dce1;
 					margin-bottom: 5px;">
-				<p style="color: #ffffff;">{{i}} {{i.0}} {{i.1}}<a href="{{i.0}}">{{i.1}}</a></p>
+				<a href="{{i.1}}">{{i.0}}</a>
 			</li>
 			{% endfor %}
 			</li>
