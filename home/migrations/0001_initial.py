@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('social_django', '0012_delete_userprofile'),
+        ('social_django', '0001_initial'),
     ]
 
     operations = [
