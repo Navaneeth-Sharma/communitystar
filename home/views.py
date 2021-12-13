@@ -39,6 +39,11 @@ def dashboard(request):
 
     for i in range(len(UserProfile.objects.all())):
         if UserProfile.objects.all()[i].user == request.user:
+            # import itertools
+
+            # qs = projectsTaken.objects.values_list('FieldA','FieldB')
+            # qs = list(itertools.chain(*qs))
+            
             print(projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct())
             return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project').values_list('project', flat=True).distinct(),
             'allproject': projectsdetails.objects.all(), 'avatar_url': get_data(request.user)[0]})
