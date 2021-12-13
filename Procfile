@@ -1,1 +1,1 @@
-web: gunicorn communitystar.wsgi --log-file -
+web: gunicorn communitystar.wsgi --preload --log-file -
