@@ -10,7 +10,7 @@ html,
 body {
     height: 100vh;
     overflow: hidden;
-    background: #0f1012
+    background:linear-gradient(to right, rgb(255, 94, 0),black 50%);
     
 }
 /* width */
