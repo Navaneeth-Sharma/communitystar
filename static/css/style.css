@@ -653,7 +653,7 @@ section {
 }
 .about:before {
   content: "";
-  background-color:#662500c7;
+  background:black;
   position: absolute;
   bottom: 0;
   top: 0;
