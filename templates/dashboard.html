@@ -18,10 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./static/css/propeller.min.css">
 
-	<link rel="stylesheet" type="text/css"
-		href="./static/components/datetimepicker/css/bootstrap-datetimepicker.css" />
-	<link rel="stylesheet" type="text/css"
-		href="./static/components/datetimepicker/css/pmd-datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="./static/components/datetimepicker/css/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="./static/components/datetimepicker/css/pmd-datetimepicker.css" />
 	<link rel="stylesheet" type="text/css" href="./static/css/propeller-theme.css" />
 	<link rel="stylesheet" type="text/css" href="./static/css/propeller-admin.css">
 	<link rel="stylesheet" type="text/css" href="./static/css/dashstyle.css">
@@ -54,20 +52,21 @@
 			<a href="/dashboard" class="navbar-brand">
 				Community Star
 			</a>
-		
+
 			<div class="navbar-brand">
 				<form class="form-inline my-2 my-lg-0" action="/dashboard" method="post">
-					<input class="form-control mr-sm-2" style="width:400px;" id="searchbar" name="search" type="search" onkeyup="card_search()" placeholder="Search" aria-label="Search">
-					<div class="form-control mr-sm-2" >
-						
+					<input class="form-control mr-sm-2" style="width:400px;" id="searchbar" name="search" type="search"
+						onkeyup="card_search()" placeholder="Search" aria-label="Search">
+					<div class="form-control mr-sm-2">
+
 						<select name="filter" style="width:100px;" required>
 							<option value="title">Title</option>
-						  <option value="prog">Programming Language</option>
-						  <option value="domain">Domain</option>
-						  <option value="framework">Framework</option>
+							<option value="prog">Programming Language</option>
+							<option value="domain">Domain</option>
+							<option value="framework">Framework</option>
 						</select>
-					  </div>
-					<button class="btn btn-outline-success my-2 my-sm-0"  type="submit"
+					</div>
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit"
 						style="background-color: #3cad44;color:  #d4dce1;">Search</button>
 				</form>
 			</div>
@@ -92,7 +91,7 @@
 				<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media"
 					data-sidebar="true" aria-expandedhref="javascript:void(0);">
 					<div class="media-left">
-						<img  width="45px" style="border-radius: 20px;" src={{avatar_url}} alt="New User">
+						<img width="45px" style="border-radius: 20px;" src={{avatar_url}} alt="New User">
 					</div>
 					<div class="media-body media-middle">{{user}}</div>
 					<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
@@ -106,22 +105,16 @@
 			<button class="buttons"><a style="text-decoration:none; color: #ffffff; border-radius: 0px;"
 					href="/create"></i>Create+ </a></button> <b style="color: #e6e6e6;"> Add new Repository</b>
 
-<br>
-<br>
-				{% for i in listofprojects %}
-					<li style="margin-left:30px;
+			<br>
+			<br>
+			{% for i in listofprojects %}
+			<li style="margin-left:30px;
 					font-size: 20px;
 					color: #d4dce1;
-					margin-bottom: 5px;
-					
-					
-					
-					
-					
-					
-					
-					">{{i}}</li>
-				{% endfor %}
+					margin-bottom: 5px;">
+				<a href="{{i.url}}">{{i.project}}</a>
+			</li>
+			{% endfor %}
 			</li>
 			<p id="demo"></p>
 			<script>
@@ -131,20 +124,22 @@
 			</script>
 		</ul>
 	</aside><!-- End Left sidebar -->
-	
-	<div id="content" class="pmd-content content-area dashboard" >
+
+	<div id="content" class="pmd-content content-area dashboard">
 		<div class="container page-container">
 			<div class="row gutters">
 				{% for project in allproject %}
-				<form method="POST" action="/dashboard" class="card_s" >
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12" style="width: 300px; height: 300px; margin: 10px;">
+				<form method="POST" action="/dashboard" class="card_s">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12"
+						style="width: 300px; height: 300px; margin: 10px;">
 						<figure class="user-card green" style="width: 300px; height: 300px; margin: 5px;">
 							<figcaption>
 								<img src="./static/img/favicon.png" alt="Soeng Souy" class="profile">
-								<input type="hidden"  name="title"  value={{project.title}}>
-								<input type="hidden"  name="url"  value={{project.link}}>
-								<h5><a href={{project.link}}  style="color: #ffffff;" target="_blank">{{project.title}}</a></h5>
-								<h6 name="user"style="color: #ffffff;">@{{project.creator}}</h6>
+								<input type="hidden" name="title" value={{project.title}}>
+								<input type="hidden" name="url" value={{project.link}}>
+								<h5><a href={{project.link}} style="color: #ffffff;"
+										target="_blank">{{project.title}}</a></h5>
+								<h6 name="user" style="color: #ffffff;">@{{project.creator}}</h6>
 								<p style="color: #ffffff;">{{project.description}}</p>
 
 								<div class="clearfix">
@@ -152,16 +147,16 @@
 									<span class="badge badge-pill badge-error">{{project.framework}}</span>
 									<span class="badge badge-pill badge-success">{{project.org}}</span>
 								</div>
-								
+
 							</figcaption>
 							<button class="buttons" type="submit" style="width: 100px; "> I'm in </button>
 							<br>
-							
+
 						</figure>
-						
+
 					</div>
 				</form>
-				
+
 				{% endfor %}
 			</div>
 		</div>
@@ -178,7 +173,7 @@
 		<div class="container-fluid">
 			<ul class="list-unstyled list-inline">
 				<li>
-					<h1 style="color: #ffffff;">{{lol}}</h1>
+					
 					<span class="pmd-card-subtitle-text"><b style="color: #d4dce1;">Community Star</b> &copy; <span
 							class="auto-update-year"></span>. All Rights Reserved.</span>
 				</li>

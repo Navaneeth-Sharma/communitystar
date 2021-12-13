@@ -44,9 +44,9 @@ def dashboard(request):
             # qs = projectsTaken.objects.values_list('FieldA','FieldB')
             # qs = list(itertools.chain(*qs))
             
-            print(projectsTaken.objects.filter(user=request.user).only('project', 'url').values_list('project', flat=True).distinct())
-            return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project').values_list('project',  flat=True).distinct(),
-            'allproject': projectsdetails.objects.all(), 'avatar_url': get_data(request.user)[0], 'lol': projectsTaken.objects.filter(user=request.user).only('project', 'url').values_list('project','url').distinct()})
+            # print(projectsTaken.objects.filter(user=request.user).only('project', 'url').values_list('project', flat=True).distinct())
+            return render(request, 'dashboard.html', {'listofprojects': projectsTaken.objects.filter(user=request.user).only('project', 'url').values_list('project','url').distinct(),
+            'allproject': projectsdetails.objects.all(), 'avatar_url': get_data(request.user)[0]})
             
     
     img, name =  get_data(request.user)
