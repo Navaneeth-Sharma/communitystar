@@ -64,7 +64,7 @@ def create(request):
                                         creator=request.user,
                                         description=request.POST['description'],
                                         title=request.POST['title'],
-                                        stage=request.POST['stage'],prog=request.POST.getlist('prog'),
+                                        stage=request.POST['stage'],prog=request.POST['prog'],
                                         org=request.POST['org'],count=request.POST['count'],
                                         framework=request.POST['framework'],level=request.POST['level'])
         return redirect('/dashboard')
