@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=q_!k-5owou0tsa(azfb3sa*9p$_3vmia!(!1)l-k*t+)dkv8@'
+SECRET_KEY = 'django-insecure-(hn&0tsbigvmwo85sts09%7@2#jfe0=h9_1ds5z8!!awi_2s^!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'social_django',
     'home.apps.HomeConfig',
-
 ]
 
 MIDDLEWARE = [
@@ -85,10 +84,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': 'name',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
     }
 }
 
@@ -130,32 +125,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_URL = '/static/'
 STATIC_ROOT = " "
-STATIC_URL = '/static/assets/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, './home/static/assets/'),
-)
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
 # Added manually 
 
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.google.GoogleOAuth2',
-    
+AUTHENTICATION_BACKENDS = [    
     'social_core.backends.github.GithubOAuth2',
-
-    'django.contrib.auth.backends.ModelBackend',
-    
-    
+    'django.contrib.auth.backends.ModelBackend', 
 ]
 
 SITE_ID=1
@@ -164,6 +151,4 @@ SITE_ID=1
 SOCIAL_AUTH_GITHUB_KEY = "9ff0f6ce175c7f373f56"
 SOCIAL_AUTH_GITHUB_SECRET = "611aa2f7ddbe0a8a257cbea00fad920290d9f2c5"
 
-
 LOGIN_REDIRECT_URL ='/dashboard'
-

@@ -46,6 +46,7 @@ def dashboard(request):
     
     img, name =  get_data(request.user)
     UserProfile.objects.create(user=request.user, name=name, image=img)
+    return render(request, 'dashboard.html')
 
 
 @csrf_exempt
