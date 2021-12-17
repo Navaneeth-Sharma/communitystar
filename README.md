@@ -1,6 +1,6 @@
 
 # Community Star
-Try out Here : [![Website](https://github.com/Navaneeth-Sharma/communitystar/blob/main/static/img/favicon.png)](communitystar.herokuapp.com/)
+Try out Here : [Website] (communitystar.herokuapp.com/)
 
 
 ## Inspiration
