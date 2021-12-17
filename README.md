@@ -1,6 +1,6 @@
 
 # Community Star
-Try out Here : [Website] (communitystar.herokuapp.com/)
+Try out Here : [Your link here](communitystar.herokuapp.com/)
 
 
 ## Inspiration
