@@ -1,6 +1,6 @@
 
 # Community Star
-Try out Here : ![communitystar.herokuapp.com/](Website)
+Try out Here : ![Website](communitystar.herokuapp.com/)
 ## Inspiration
 All of us use open source software in our everyday life. But how cool would it be if we can contribute back it. Contributing to open source is a way of giving back to the ever helpful tech community that has helped millions start their journey in the tech industry for free. Contribution to open source is great feeling for both beginners and experts of the field. 
 Contribution to real world projects will boost the confidence of beginners who would otherwise be wasting their time watching endless tutorial videos on YouTube. Experts/Pro can give give back to the community by putting use their experience.
