@@ -1,11 +1,9 @@
 import requests
-from django.contrib import auth
-from django.contrib.auth import authenticate
 from django.contrib.auth import logout as auth_logout
-from django.shortcuts import HttpResponse, redirect, render
+from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import UserProfile, UserSocialAuth, projectsdetails, projectsTaken
+from .models import UserProfile, projectsdetails, projectsTaken
 
 
 def get_data(username):
