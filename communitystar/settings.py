@@ -138,9 +138,10 @@ USE_TZ = True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_URL = "/static/"
-STATIC_ROOT = "static"
+STATIC_ROOT = "static"  # blank for local dev and staic for heroku
 
-STATICFILES_DIRS = []
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")] # for local
+STATICFILES_DIRS = []  # for heroku
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
